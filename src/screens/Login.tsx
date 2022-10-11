@@ -13,15 +13,24 @@ export default function Login({ navigation }) {
     <KeyboardAvoidingView
       behavior={Platform.OS == "ios" ? "padding" : "height"}
     >
-      <View style={{ backgroundColor: "white" }}>
+      <View
+        style={{
+          backgroundColor: "white",
+          margin: 50,
+          paddingTop: 50,
+        }}
+      >
+        <Text style={{ fontSize: 15, textAlign: "center" }}>
+          ACESSE SUA CONTA
+        </Text>
         <TextInput
           placeholder="E-mail"
           style={{
             backgroundColor: "transparent",
-            fontSize: 20,
+            fontSize: 12,
             marginTop: 10,
             padding: 7,
-            margimBottom: 15,
+            margin: 10,
           }}
           keyboardType="default"
         ></TextInput>
@@ -31,14 +40,38 @@ export default function Login({ navigation }) {
           secureTextEntry={true}
           style={{
             backgroundColor: "white",
-            fontSize: 20,
+            fontSize: 12,
             marginTop: 10,
             padding: 7,
-            margimBottom: 15,
+            margin: 10,
           }}
         ></TextInput>
-        <TouchableOpacity>
-          <Text>Entrar</Text>
+        <TouchableOpacity style={{ margin: 10, backgroundColor: "#000" }}>
+          <Text
+            style={{
+              fontSize: 20,
+              textAlign: "center",
+              color: "#fff",
+              margin: 10,
+            }}
+          >
+            Entrar
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Home")}
+          style={{ margin: 10, backgroundColor: "#000" }}
+        >
+          <Text
+            style={{
+              fontSize: 20,
+              textAlign: "center",
+              color: "#fff",
+              margin: 10,
+            }}
+          >
+            Home
+          </Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
