@@ -5,7 +5,7 @@ export default function Home({}) {
   return (
     <>
       <View style={{ backgroundColor: "#fff" }}>
-        <Text style={{ color: "#fff" }}>Home</Text>
+        <Text style={{ color: "#fff" }}>Home test</Text>
       </View>
     </>
   );
